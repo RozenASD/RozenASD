@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两列flex布局</title>
+    <style>
+        ul,h2,h3
+        {
+            margin: 0;
+            padding: 0;
+        }
+        ul
+        {
+            list-style: none;
+            
+        }
+        a
+        {
+            text-decoration: none;
+        }
+        .main
+        {
+            display: flex;
+            width: 80%;
+            height: 100%;
+            border: 1px solid #069;
+            font-size: 12px;
+            flex-grow: 1;
+        }
+        .left
+        {
+            display: flex;
+            width: 50%;
+            padding-left: 7px;
+            flex-direction: column;/*设置主轴方向(在flex格式里纵向排列)*/
+        }
+        .left>div
+        {
+            display: flex;
+            flex-direction: row;/*设置主轴方向(在flex格式里横向排列)*/
+        }
+
+        .left h2
+        {
+            height: 40%;
+            line-height: 140%;
+            font-size: 200%;
+            color: #fff;
+            text-align: center;
+            background-color:#069;
+            margin-bottom: 6px;
+            margin-top: 6px;
+            margin-right: 8px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .right
+        {
+            width: 35%;
+            height: 100%;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;/*设置主轴方向(在flex格式里纵向排列)*/
+            
+        }
+        .right h3
+        {
+            font-size: 90%;
+            color: #069;
+            border-bottom: 1px solid #069;
+            text-align: center;
+            line-height: 300%;
+            margin-bottom: 5%;
+            text-overflow: ellipsis;
+            white-space: nowrap;/*不换行*/
+            overflow: hidden;/* 超出部分隐藏*/
+
+        }
+        .squ
+        {
+            line-height:200%;
+            color: #069;
+            text-align: center;
+            flex-grow: 1;
+            border: #069 1px solid;
+            margin-top: 3px;
+            text-overflow: ellipsis;/* 超出部分隐藏*/
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .right ul
+        {
+            padding-left: 9px;
+            line-height: 20px;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .right ul li a
+        {
+            color: #069;
+            line-height: 120%;
+            font-size: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .right ul li
+        {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .line
+        {
+            height: 40%;
+            width: 10%;;
+            border-bottom: 1px solid #069;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <h2>前端学习技术</h2>
+            <div>
+                <div class="squ">视频教程</div>
+                <div class="line"></div>
+                <div class="squ">视频教程</div>
+                <div class="line"></div>
+                <div class="squ">视频教程</div>
+            </div>
+            <div>
+                <div class="squ">视频教程</div>
+                <div class="line"></div>
+                <div class="squ">视频教程</div>
+                <div class="line"></div>
+                <div class="squ">视频教程</div>
+            </div>
+            <div>
+                <div class="squ">视频教程</div>
+                <div class="line"></div>
+                <div class="squ">视频教程</div>
+                <div class="line"></div>
+                <div class="squ">视频教程</div>
+            </div>
+            <div>
+                <div class="squ">视频教程</div>
+                <div class="line"></div>
+                <div class="squ">视频教程</div>
+                <div class="line"></div>
+                <div class="squ">视频教程</div>
+            </div>
+        </div>
+        <div class="right">
+            <h3>流行的JavaScript框架: Vue.js</h3>
+            <ul>
+                <li><a href="">高级CSS应用技巧：圆角规矩和a:hover</a></li>
+                <li><a href="">高级CSS应用技巧：圆角规矩和a:hover</a></li>
+                <li><a href="">高级CSS应用技巧：圆角规矩和a:hover</a></li>
+                <li><a href="">高级CSS应用技巧：圆角规矩和a:hover</a></li>
+                <li><a href="">高级CSS应用技巧：圆角规矩和a:hover</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
